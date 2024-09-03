@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="mt-5">Appointments</h2>
+        <table class="table table-striped mt-3">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Patient Name</th>
+              <th scope="col">Doctor Name</th>
+              <th scope="col">Appointment Date</th>
+              <th scope="col">Reason</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr *ngFor="let appointment of appointments; let i = index">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ appointment.patientName }}</td>
+              <td>{{ appointment.doctorName }}</td>
+              <td>{{ appointment.formattedDate }}</td>
+              <td>{{ appointment.reason }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
